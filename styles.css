@@ -13,6 +13,38 @@ header {
     padding: 1rem;
 }
 
+#bias-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -65,9 +97,71 @@ footer {
     width: 100%;
 }
 
+.kNKNnc video {
+    width: 100%;
+}
+
+video {
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.two-column-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#info {
+    flex: 1;
+    min-width: 300px;
+}
+
+#chart {
+    flex: 1;
+    min-width: 300px;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+}
+
+.chakra img {
+    border-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .two-column-layout {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 600px) {
     nav ul li {
         display: block;
         margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    #bias-cards {
+        grid-template-columns: 1fr;
     }
 }
